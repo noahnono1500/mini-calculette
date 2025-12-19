@@ -4,8 +4,8 @@
 Mini-projet web : 2 champs numériques, choix d'opération, bouton *Calculer* et affichage du résultat.
 
 ## Fonctionnalités
-- [ ] Addition
-- [ ] Soustraction
+- [x] Addition
+- [x] Soustraction
 - [ ] Multiplication
 
 ## Fichiers
