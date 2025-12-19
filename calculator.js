@@ -1,15 +1,9 @@
 "use strict";
 
-// Fonctions métier
-function add(a, b) {
-    return a + b;
-}
-function sub(a, b) {
-    return a - b;
-}
-function mul(a, b) {}
+function add(a, b) { return a + b; }
+function sub(a, b) { return a - b; }
+function mul(a, b) { return a * b; }
 
-// UI
 function parseNumber(value) {
     const n = Number(value);
     return Number.isFinite(n) ? n : null;
@@ -24,12 +18,9 @@ function setResult(value) {
 }
 
 function handleCalculate() {
-    const aVal = document.getElementById("a").value;
-    const bVal = document.getElementById("b").value;
+    const a = parseNumber(document.getElementById("a").value);
+    const b = parseNumber(document.getElementById("b").value);
     const op = document.getElementById("op").value;
-
-    const a = parseNumber(aVal);
-    const b = parseNumber(bVal);
 
     if (a === null || b === null) {
         setHint("Veuillez saisir deux nombres valides.");
@@ -38,18 +29,11 @@ function handleCalculate() {
     }
 
     let res;
-    switch (op) {
-        case "add": res = add(a, b); break;
-        case "sub": res = sub(a, b); break;
-        case "mul": res = mul(a, b); break;
-        default:
-            setHint("Opération inconnue.");
-            setResult("—");
-            return;
-    }
-
-    if (typeof res !== "number" || !Number.isFinite(res)) {
-        setHint("Fonction non implémentée (ou résultat invalide).");
+    if (op === "add") res = add(a, b);
+    else if (op === "sub") res = sub(a, b);
+    else if (op === "mul") res = mul(a, b);
+    else {
+        setHint("Opération inconnue.");
         setResult("—");
         return;
     }
