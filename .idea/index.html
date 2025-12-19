@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mini Calculette</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="container">
+    <h1>Mini calculette</h1>
+
+    <section class="card">
+        <label>
+            Nombre A
+            <input id="a" type="number" inputmode="decimal" step="any" placeholder="Ex: 12" />
+        </label>
+
+        <label>
+            Nombre B
+            <input id="b" type="number" inputmode="decimal" step="any" placeholder="Ex: 3" />
+        </label>
+
+        <label>
+            Opération
+            <select id="op">
+                <option value="add">Addition (+)</option>
+                <option value="sub">Soustraction (-)</option>
+                <option value="mul">Multiplication (×)</option>
+            </select>
+        </label>
+
+        <button id="calcBtn" type="button">Calculer</button>
+
+        <div class="result">
+            Résultat : <span id="result">—</span>
+        </div>
+
+        <p class="hint" id="hint"></p>
+    </section>
+
+    <footer class="footer">
+        <small>TP — Workflow inspiré de Git Flow</small>
+    </footer>
+</main>
+
+<script src="calculator.js"></script>
+</body>
+</html>
