@@ -1,7 +1,9 @@
 "use strict";
 
-// Fonctions métier (initialement vides)
-function add(a, b) {}
+// Fonctions métier
+function add(a, b) {
+    return a + b;
+}
 function sub(a, b) {}
 function mul(a, b) {}
 
